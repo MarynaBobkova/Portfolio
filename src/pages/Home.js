@@ -1,28 +1,39 @@
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { scroller } from 'react-scroll';
+import Skills from "../components/header/Skills";
 import Header from "./../components/header/Header";
-
+import Contacts from "./Contacts";
+import Projects from "./Projects";
+import { Element } from "react-scroll";
 
 const Home = () => {
-    return ( 
-        <>
-        <Header />
+  const location = useLocation();
 
-    <main className="section">
-        <div className="container">
+  useEffect(() => {
+    if (location.hash) {
+      const section = location.hash.substring(1);
+      scroller.scrollTo(section, {
+        smooth: true,
+        duration: 500,
+      });
+    }
+  }, [location]);
 
-                <ul className="content-list">
-                    <li className="content-list__item">
-                        <h2 className="title-2">Frontend</h2>
-                        <p>JavaScript, TypeScript, Angular, Redux, HTML5, CSS, NPM, BootStrap, TailwindCSS, ReactJS(Fundamentals, Hooks, Router, Redux)</p>
-                    </li>
-                    <li className="content-list__item">
-                        <h2 className="title-2">Backend</h2>
-                        <p>Java, Spring Boot, Spring MVC, NodeJS, Databases: MySQL, MongoDB</p>
-                    </li>
-                </ul>
-        </div>
-    </main>
+  return (
+    <>
+      <Header />
+      <Element name="skillsSection">
+        <Skills />
+      </Element>
+      <Element name="projectsSection">
+        <Projects />
+      </Element>
+      <Element name="contactsSection">
+        <Contacts />
+      </Element>
     </>
-     );
-}
- 
+  );
+};
+
 export default Home;

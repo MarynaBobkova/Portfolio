@@ -12,7 +12,7 @@ const Footer = () => {
                 <li className="social__item"><a href="https://www.linkedin.com/in/maryna-bobkova-a124b82a6/" target="_blank"><img src={linkedIn} alt="Link"/></a></li>
             </ul>
             <div className="copyright">
-                <p>© 2022 frontend-dev.com</p>
+                <p>© Maryna Bobkova, 2024 - Dortmund </p>
             </div>
         </div>
     </div>
