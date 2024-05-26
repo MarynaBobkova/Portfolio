@@ -4,11 +4,11 @@
 	border-bottom: 1px solid var(--nav-border);
 	color: var(--nav-text);
 	letter-spacing: normal;
-	position: fixed; /* Фиксируем Navbar */
-	top: 0; /* Располагаем его в верхней части экрана */
-	width: 100%; /* Растягиваем по всей ширине экрана */
-	z-index: 1000; /* Устанавливаем высокий z-index, чтобы Navbar находился поверх других элементов */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем небольшую тень для визуального отделения */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .nav-row {
@@ -45,10 +45,12 @@
   .nav-list__link {
 	color: var(--nav-text);
 	transition: opacity 0.2s ease-in;
+	cursor: pointer; /* Добавлено */
   }
   
   .nav-list__link:hover {
 	opacity: 0.8;
+	cursor: pointer; /* Добавлено */
   }
   
   .nav-list__link--active {
