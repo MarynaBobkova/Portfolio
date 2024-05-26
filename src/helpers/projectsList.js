@@ -24,7 +24,7 @@ const projects = [
     description:'The platform for creating wishlists. The user adds gifts to the created wishlist, which displays the name, price, gift link and image. There is an option to share the link to the Wishlist with your friends, where they can book a favorite gift to avoid repeats.',
     img: project03,
     imgBig: project03Big,
-    gitHubLink: "https://github.com/ania0005/Wishlist_project/tree/main",
+    gitHubLink: "https://github.com/MarynaBobkova/Wishlist.git",
   },
   {
     title: "Online shop",

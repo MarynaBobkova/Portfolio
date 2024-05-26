@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
-import Skills from "../components/header/Skills";
+import Skills from "./Skills";
 import Header from "./../components/header/Header";
 import Contacts from "./Contacts";
 import Projects from "./Projects";
